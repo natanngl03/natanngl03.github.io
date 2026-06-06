@@ -1,0 +1,67 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section class="container-fluid py-5 bg-light" id="SectionContact">
+    <div class="section-title-1 text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+        <h6 class="fw-bold text-primary text-uppercase">Kontak Kami</h6>
+        <p class="h2 mb-0">Mari Diskusikan Kebutuhan Website Anda</p>
+    </div>
+
+    <div class="container">
+        <div class="row g-2 mb-4">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="bg-white rounded p-3 d-flex flex-column flex-lg-row align-items-center gap-2 gap-lg-4 h-100 content">
+                    <Icon name="fa6-solid:location-dot" size={25} class="text-primary location-icon flex-shrink-0" />
+                    <p class="text-center text-lg-start m-0">
+                        Jl. Perum Griya Asri Raya No.10 Blok B3, RT.23/RW.6, Jelupang, Serpong Utara, South Tangerang City, Banten 15323
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 wow fadeIn" data-wow-delay="0.2s">
+                <a
+                    class="bg-white rounded text-dark p-3 d-flex flex-column flex-lg-row align-items-center gap-2 gap-lg-4 h-100 content"
+                    href="mailto:contact@erosoft.id?subject=Konsultasi Website"
+                >
+                    <Icon name="fa6-solid:envelope" size={25} class="text-danger flex-shrink-0" />
+                    <p class="text-center text-lg-start m-0">contact@erosoft.id</p>
+                </a>
+            </div>
+
+            <div class="col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                <a
+                    class="bg-white rounded text-dark p-3 d-flex flex-column flex-lg-row align-items-center gap-2 gap-lg-4 h-100 content"
+                    href="https://wa.me/6285117436727?text=Hallo%20erosoft.id%2C%20saya%20ingin%20bertanya%20mengenai%20pembuatan%20website."
+                >
+                    <Icon name="fa6-solid:phone" size={25} class="text-success flex-shrink-0" />
+                    <p class="text-center text-lg-start m-0">085117436727</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="row g-0 wow fadeIn" data-wow-delay="0.4s">
+            <div class="border rounded overflow-hidden maps-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.9336808794656!2d106.66087586792361!3d-6.272451447486475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fb0543ac334d%3A0xdb42832087aabd85!2sJl.%20Perum%20Griya%20Asri%20Raya%20No.B3%2C%20RW.7%2C%20Jelupang%2C%20Kec.%20Serpong%20Utara%2C%20Kota%20Tangerang%20Selatan%2C%20Banten%2015323!5e0!3m2!1sid!2sid!4v1780664165396!5m2!1sid!2sid"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    width="100%"
+                    height="100%"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .maps-container {
+        width: 100%;
+        height: 450px;
+    }
+
+    .content p {
+        min-width: 0;
+        word-break: break-word;
+    }
+</style>

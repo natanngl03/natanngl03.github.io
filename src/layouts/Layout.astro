@@ -1,23 +1,82 @@
+---
+import "./../assets/custom.scss";
+import "./../assets/css/style.css";
+import Footer from "../components/Footer.astro";
+import Navbar from "./../components/Navbar/Navbar.astro";
+import WhatsaapFloating from "../components/WhatsaapFloating.astro";
+
+interface Props extends BaseProps {}
+
+const props = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="id">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta charset="utf-8" />
+		<title>EROSOFT.ID | Jasa Pembuatan Website Profesional</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<meta
+			name="description"
+			content="Erosoft.id menyediakan jasa pembuatan website profesional untuk UMKM, perusahaan, dan personal branding. Website cepat, responsif, ramah SEO, dan mudah dikelola."
+		/>
+		<meta
+			name="keywords"
+			content="jasa pembuatan website, jasa website profesional, website company profile, website UMKM, website bisnis, jasa web developer, website SEO, landing page, website responsif"
+		/>
+		<meta name="robots" content="index, follow" />
+		<meta name="author" content="Erosoft.id" />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Jasa Pembuatan Website Profesional | Erosoft.id" />
+		<meta
+			property="og:description"
+			content="Website profesional, cepat, responsif, dan ramah SEO untuk membantu bisnis Anda berkembang secara online."
+		/>
+		<meta property="og:url" content="https://erosoft.id" />
+		<meta property="og:site_name" content="Erosoft.id" />
+		<meta property="og:image" content="https://erosoft.id/img/og-image.jpg" />
+
+		<!-- Favicon -->
+		<link href="img/favicon.ico" rel="icon" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Libraries Stylesheet -->
+		<link href="ext/animate/animate.min.css" rel="stylesheet" />
+		<link href="ext/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+		<!-- <link href="css/style.css" rel="stylesheet" /> -->
 	</head>
+
 	<body>
+		<div
+			id="spinner"
+			class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+		>
+			<div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+		</div>
+
+		<Navbar lang={props.lang} />
+
 		<slot />
+		<Footer />
+
+		<WhatsaapFloating />
+
+		<script is:inline src="https://code.jquery.com/jquery-3.4.1.min.js" defer></script>
+		<script is:inline src="ext/wow/wow.min.js" defer></script>
+		<script is:inline src="ext/easing/easing.min.js" defer></script>
+		<script is:inline src="ext/waypoints/waypoints.min.js" defer></script>
+		<script is:inline src="ext/owlcarousel/owl.carousel.min.js" defer></script>
+		<script is:inline src="js/main.js" defer></script>
+
+		<script>
+			import "bootstrap";
+		</script>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

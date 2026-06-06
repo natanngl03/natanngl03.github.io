@@ -1,0 +1,65 @@
+---
+import { Icon } from "astro-icon/components";
+import NavbarJson from "./navbar.json";
+
+interface Props extends BaseProps {}
+
+const { lang } = Astro.props;
+---
+
+<div class="container-fluid fixed-top bg-white border-bottom" data-wow-delay="0.1s" id="navbar-container">
+    <div class="container navbar-container">
+        <nav class="navbar navbar-expand-lg navbar-light py-4 py-lg-2" data-wow-delay="0.1s">
+            <a href="/" class="navbar-brand">
+                <p class="h2 text-primary m-0">EROSOFT.ID</p>
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <Icon name="fa6-solid:bars" />
+            </button>
+            <div class="collapse navbar-collapse g-0" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    {
+                        NavbarJson &&
+                            NavbarJson.map((item) => (
+                                <a href={item.href} class="nav-item nav-link text-dark">
+                                    {item.label[lang]}
+                                </a>
+                            ))
+                    }
+                </div>
+
+                <div class="d-none d-lg-flex ms-4 gap-lg-2">
+                    {
+                        // ["phone", "envelope", "location-dot"].map((val) => (
+                        [
+                            {
+                                icon: "phone",
+                                href: "https://wa.me/6285117436727?text=Hallo%20erosoft.id%2C%20saya%20ingin%20bertanya%20mengenai%20pembuatan%20website.",
+                            },
+                            {
+                                icon: "envelope",
+                                href: "mailto:contact@erosoft.id?subject=Konsultasi Website",
+                            },
+                            {
+                                icon: "location-dot",
+                                href: "https://maps.app.goo.gl/TaUESQZ7xoEVWWCa7",
+                            },
+                        ].map((val) => (
+                            <a class="d-flex align-items-center justify-content-center bg-light p-2 rounded-circle" href={val.href}>
+                                <Icon name={`fa6-solid:${val.icon}`} size={15} />
+                            </a>
+                        ))
+                    }
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+            document.querySelector(".navbar-collapse")?.classList.remove("show");
+        });
+    });
+</script>

@@ -1,0 +1,86 @@
+{
+    "section": "price",
+    "section_tag": "Paket Harga",
+    "section_heading": "Temukan Paket Website yang Tepat",
+    "section_subheading": null,
+    "section_description": null,
+    "data": {
+        "cards": [
+            {
+                "plan": "Basic", 
+                "price": "700Rb", 
+                "description": "Cocok Untuk Landing Page, Company Profile, UMKM Profile Sederhana",
+                "list": [
+                    {"type": "success", "label": "Gratis Domain .COM"},
+                    {"type": "success", "label": "Desain Responsif"},
+                    {"type": "success", "label": "Revisi 1 Kali"},
+                    {"type": "error", "label": "Email Bisnis"},
+                    {"type": "error", "label": "Custom Design"},
+                    {"type": "error", "label": "Panel Admin Update Konten"},
+                    {"type": "error", "label": "Multi Halaman"},
+                     {"type": "error", "label": "Blog"},
+                    {"type": "error", "label": "ECommerce"}
+
+                ],
+                "subscription": "*Rp 500Rb/Tahun",
+                "href": "https://wa.me/6285117436727?text=Hallo%20erosoft.id,%20saya%20ingin%20bertanya%20paket%20Basic."
+            },
+            {
+                "plan": "Starter", 
+                "price": "1.4Jt", 
+                "description": "Website Professional Untuk Kebutuhan Bisnis Anda",
+                "list": [
+                    {"type": "success", "label": "Gratis Domain .COM"},
+                    {"type": "success", "label": "Desain Responsif"},
+                    {"type": "success", "label": "Revisi 2 Kali"},
+                    {"type": "success", "label": "Email Bisnis"},
+                    {"type": "success", "label": "Custom Design Minor"},
+                    {"type": "success", "label": "Panel Admin Update Konten"},
+                    {"type": "success", "label": "Multi Halaman"},
+                    {"type": "error", "label": "Blog"},
+                    {"type": "error", "label": "ECommerce"}
+                ],
+                "subscription": "*Rp 800Rb/Tahun",
+                "href": "https://wa.me/6285117436727?text=Hallo%20erosoft.id,%20saya%20ingin%20bertanya%20paket%20Starter."
+            },
+            {
+                "plan": "Premium", 
+                "price": "2.1Jt", 
+                "description": "Website Professional Untuk Kebutuhan Bisnis Anda Dengan Fitur Artikel & Blog",
+                "list": [
+                    {"type": "success", "label": "Gratis Domain .COM"},
+                    {"type": "success", "label": "Desain Responsif"},
+                    {"type": "success", "label": "Revisi 4 Kali"},
+                    {"type": "success", "label": "Email Bisnis"},
+                    {"type": "success", "label": "Custom Design"},
+                    {"type": "success", "label": "Panel Admin Update Konten"},
+                    {"type": "success", "label": "Multi Halaman"},
+                    {"type": "success", "label": "Blog"},
+                    {"type": "error", "label": "ECommerce"}
+                ],
+                "subscription": "*Rp 1,2Jt/Tahun",
+                "href": "https://wa.me/6285117436727?text=Hallo%20erosoft.id,%20saya%20ingin%20bertanya%20paket%20Premium."
+            },
+            {
+                "plan": "Full Custom", 
+                "price": "Harga Nego", 
+                "description": "Cocok untuk bisnis yang membutuhkan website dan sistem yang dirancang khusus sesuai kebutuhan.",
+                "list": [
+                    {"type": "success", "label": "Gratis Domain .COM"},
+                    {"type": "success", "label": "Desain Responsif"},
+                    {"type": "success", "label": "Revisi 5 Kali"},
+                    {"type": "success", "label": "Email Bisnis"},
+                    {"type": "success", "label": "Custom Design By Figma"},
+                    {"type": "success", "label": "Custom Design By AdobeXD"},
+                    {"type": "success", "label": "Opsi Framework Pilihan Anda"},
+                    {"type": "success", "label": "Panel Admin Update Konten"},
+                    {"type": "success", "label": "Multi Halaman"},
+                    {"type": "success", "label": "Blog"},
+                    {"type": "success", "label": "ECommerce"}
+                ],
+                "subscription": "*Nego",
+                "href": "https://wa.me/6285117436727?text=Hallo%20erosoft.id,%20saya%20ingin%20bertanya%20paket%20Full%20Custom."
+            }
+        ]
+    }
+}

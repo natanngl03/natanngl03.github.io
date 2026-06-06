@@ -1,0 +1,78 @@
+---
+import PricingData from "./pricing.data.json";
+import { Icon } from "astro-icon/components";
+
+const { section_tag, section_heading, data } = PricingData;
+
+const { cards } = data;
+---
+
+<!-- Pricing Plan Start -->
+<section class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" id="SectionPrice">
+    <div class="container py-5">
+        <div class="section-title-1 text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+            <h6 class="fw-bold text-primary text-uppercase">{section_tag}</h6>
+            <h2 class="h2 mb-0">{section_heading}</h2>
+        </div>
+        <div class="row g-2">
+            {
+                cards &&
+                    cards.map((item, idx) => {
+                        const delay = `0.${idx + 2}s`;
+
+                        const { plan, description, price, list, subscription, href } = item;
+
+                        return (
+                            <div class="col-lg-3 wow slideInUp" data-wow-delay={delay}>
+                                {/* PRICING CARD */}
+                                <div class="bg-light rounded">
+                                    <div class="border-bottom py-4 px-5 mb-4">
+                                        <h5 class="fw-bold text-primary mb-1">{plan}</h5>
+                                        <small class="">{description}</small>
+                                    </div>
+                                    <div class="p-5 pt-0">
+                                        <h4 class="fw-bold mb-3">
+                                            {plan !== "Full Custom" && "Rp "} {price}
+                                        </h4>
+                                        {list &&
+                                            list.map((item: any) => {
+                                                return (
+                                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                                        <span class="m-0">{item.label}</span>
+                                                        <Icon
+                                                            name={item.type === "success" ? "fa6-solid:check" : "fa6-solid:xmark"}
+                                                            class:list={[item.type === "success" ? "text-success" : "text-error", "pt-1"]}
+                                                            size={30}
+                                                        />
+                                                    </div>
+                                                );
+                                            })}
+
+                                        <div class="mt-4 text-end" style="font-size: 13px;">
+                                            <p class="m-0">Langganan</p>
+                                            <p class="m-0">{subscription}</p>
+                                        </div>
+
+                                        <a
+                                            href={href}
+                                            class="btn btn-primary d-flex align-items-center justify-content-center gap-2 mt-4 action py-2"
+                                        >
+                                            <Icon name="fa6-brands:whatsapp" size={20} />
+                                            <span class="mb-0">Pesan Sekarang</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                    })
+            }
+        </div>
+    </div>
+</section>
+<!-- Pricing Plan End -->
+
+<style>
+    .action span {
+        font-size: 14px;
+    }
+</style>
