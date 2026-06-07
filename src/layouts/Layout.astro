@@ -16,14 +16,17 @@ const props = Astro.props;
 		<meta charset="utf-8" />
 		<title>EROSOFT.ID | Jasa Pembuatan Website Profesional</title>
 		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
 		<meta
 			name="description"
-			content="Erosoft.id menyediakan jasa pembuatan website profesional untuk UMKM, perusahaan, dan personal branding. Website cepat, responsif, ramah SEO, dan mudah dikelola."
+			content="Erosoft.id menyediakan jasa pembuatan website profesional di Tangerang Selatan (Tangsel) untuk UMKM, perusahaan, dan personal branding. Website cepat, responsif, SEO-friendly, dan mudah dikelola."
 		/>
+
 		<meta
 			name="keywords"
-			content="jasa pembuatan website, jasa website profesional, website company profile, website UMKM, website bisnis, jasa web developer, website SEO, landing page, website responsif"
+			content="jasa pembuatan website tangsel, jasa pembuatan website tangerang selatan, website profesional, website company profile, website UMKM, web developer tangsel, website bisnis, landing page"
 		/>
+
 		<meta name="robots" content="index, follow" />
 		<meta name="author" content="Erosoft.id" />
 
@@ -39,18 +42,26 @@ const props = Astro.props;
 
 		<!-- Favicon -->
 		<link href="img/favicon.ico" rel="icon" />
-
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
 		<link
+			rel="preload"
+			as="style"
 			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-			rel="stylesheet"
+			onload="this.onload=null;this.rel='stylesheet'"
 		/>
 		<!-- Libraries Stylesheet -->
 		<link href="ext/animate/animate.min.css" rel="stylesheet" />
 		<link href="ext/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 		<!-- <link href="css/style.css" rel="stylesheet" /> -->
+
+		<noscript>
+			<link
+				href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+				rel="stylesheet"
+			/>
+		</noscript>
 	</head>
 
 	<body>
@@ -76,7 +87,7 @@ const props = Astro.props;
 		<script is:inline src="js/main.js" defer></script>
 
 		<script>
-			import "bootstrap";
+			import "./../../node_modules/bootstrap/dist/js/bootstrap.min.js";
 		</script>
 	</body>
 </html>

@@ -1,4 +1,10 @@
-<div class="hero-container">
+---
+import { Image } from "astro:assets";
+
+import HeroImage from "./../assets/img/hero.webp";
+---
+
+<div class="hero-container" id="Hero">
     <div class="container hero-content">
         <div class="row">
             <div class="col-md-8">
@@ -10,7 +16,16 @@
         </div>
     </div>
 
-    <img src="/img/hero.webp" alt="hero image" class="hero-img wow fadeIn" data-wow-delay="0.1s" />
+    <Image
+        src={HeroImage}
+        alt="hero image"
+        layout="constrained"
+        class="hero-img wow fadeIn"
+        data-wow-delay="0.1s"
+        width={1920}
+        height={1080}
+        quality={70}
+    />
 </div>
 
 <script>

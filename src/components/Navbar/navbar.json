@@ -1,5 +1,5 @@
 [
-    {"href": "#", "label": {"id": "Beranda", "en": "Home"}},
+    {"href": "#Hero", "label": {"id": "Beranda", "en": "Home"}},
     {"href": "#SectionAbout", "label": {"id": "Profil", "en": "About"}},
     {"href": "#SectionFaq", "label": {"id": "Pertanyaan", "en": "Faq"}},
     {"href": "#SectionPrice", "label": {"id": "Harga", "en": "Price"}},
