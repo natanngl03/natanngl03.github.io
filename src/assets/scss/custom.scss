@@ -1,7 +1,5 @@
-
-$primary: #1A659E; 
-$secondary: #f50505;
-$light: #F6F6FA;
+$primary: #1a659e;
+$light: #f6f6fa;
 $dark: #353f4f;
 
 $font-family-sans-serif: "Poppins", sans-serif;
@@ -12,4 +10,4 @@ $link-decoration: none;
 
 $display-font-weight: 500;
 
-@import "./../../node_modules/bootstrap/scss/bootstrap";
+@import "./../../../node_modules/bootstrap/scss/bootstrap";
